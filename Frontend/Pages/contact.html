@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/style-main.css">
+    <script src="https://kit.fontawesome.com/bc12f67c88.js" crossorigin="anonymous"></script>
+    <title>Contact Us</title>
+</head>
+<body>
+    <section class="store">
+        <div class="store_cont">
+            <div class="header-main">
+                <div class="container">
+                  <a href="#" class="header-logo">
+                    <img src="../Images/logo.jpg"
+                      alt="logo" width="95" height="53" onclick="toggleSection1('banner')">
+                  </a>
+                  <div class="header-search-container">
+                    <ul class="desktop-menu-category-list">
+                      <li class="menu-category">
+                        <a href="../Home/main.html" class="menu-title active">Home</a>
+                      </li>
+                      <li class="menu-category">
+                        <a href="../Pages/about_us.html" class="menu-title">About Us</a>
+                      </li>
+                      <li class="menu-category">
+                        <a href="../Pages/store.html" class="menu-title">Store</a>
+                      </li>
+                      <li class="menu-category">
+                        <a href="../Pages/contact.html" class="menu-title">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header-user-actions">
+                    <button class="login" onclick="toLogin()">
+                      Login/Signup
+                    </button>
+                    <button class="action-btn" id="cart_1" onclick="openSidebar()">
+                      <ion-icon name="bag-handle-outline"></ion-icon>
+                      <span class="count" id="cart-count">0</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        function showForm(formId) {
+          var forms = document.querySelectorAll('.form-section-p');
+          forms.forEach(function (form) {
+            form.style.display = 'none';
+          });
+          document.getElementById(formId).style.display = 'block';
+        }
+        function dis() {
+          alert("Your payment method is: ");
+          windows.location.form("main.html");; // Replace "nextpage.html" with the URL of the next page
+        }
+
+        function validation() {
+          var name = document.getElementById("name").value;
+          var nameRegex = /^[a-zA-Z ]+$/;
+          var pno = document.getElementById("phone_no");
+
+          var em = document.getElementById("error-message");
+          if (pno.lenght !== 10) {
+            errorElement.innerHTML = "Enter valid no";
+          }
+          else {
+            toggleSection1('banner');
+          }
+
+        }
+        function calculateTotal() {
+
+          var input1 = parseFloat(document.getElementById("price_pr").value);
+          var input2 = parseFloat(document.getElementById("dc").value);
+
+          var total = input1 + input2;
+
+
+          document.getElementById("total_pr").textContent = total;
+        }
+
+
+        var locationSelect = document.getElementById("locationSelect");
+        var deliveryChargesInput = document.getElementById("dc");
+        var errorMessage = document.getElementById("errorMessage");
+
+        // Define delivery charges for each location
+        var deliveryCharges = {
+          "Mumbai": 20,
+          "Thane": 35,
+          "Palghar": 30,
+          "Navi Mumbai": 40
+          // Add more locations and charges as needed
+        };
+
+        // Function to update delivery charges input based on selected location
+        function updateDeliveryCharges() {
+          var selectedLocation = locationSelect.value;
+          if (selectedLocation !== "") {
+            var charges = deliveryCharges[selectedLocation];
+            if (charges !== undefined) {
+              deliveryChargesInput.value = charges;
+              errorMessage.textContent = ""; // Clear error message if location is selected
+
+            } else {
+              deliveryChargesInput.value = "select city"; // Or any default value
+            }
+          } else {
+            deliveryChargesInput.value = ""; // Clear the input if no location is selected
+            errorMessage.textContent = "Please select a location"; // Show error message
+          }
+          calculateTotal();
+        }
+
+        // Listen for the change event on the select element
+        locationSelect.addEventListener("change", updateDeliveryCharges);
+
+        // Call the function once to set initial delivery charges
+        updateDeliveryCharges();
+
+
+
+      </script>
+</body>
+</html>

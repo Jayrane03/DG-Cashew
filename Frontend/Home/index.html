@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Admin Dashboard | Keyframe Effects</title>
+    <link rel="stylesheet" href="../Styles/style-index.css">
+    <link rel="stylesheet" href="../Styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+   <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <h3><span><center>DG Cashew Traders</center></span></h3>
+        </div>
+        
+        <div class="side-content">
+            
+            <div class="side-menu">
+                <ul>
+                    <li>
+                       <a href="#menu" class="active">
+                            <span class="las la-home"></span>
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="#menu2">
+                            <span class="las la-plus"></span>
+                            <small>ADD PRODUCT</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="#menu1">
+                            <span class="las la-edit"></span>
+                            <small>MODIFY</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="#menu3">
+                            <span class="las la-shopping-cart"></span>
+                            <small>Order</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-map-marked"></span>
+                            <small>Tracking Details</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-tasks"></span>
+                            <small>Tasks</small>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+      <div class="main-content">
+        
+        <header>
+           
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                
+                <div class="header-menu">
+                    
+                    
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify">4</span>
+                    </div>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    
+                    <div class="user">
+                    
+                        
+                        <span class="las la-power-off"></span>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        
+        <main>
+            <div class="content">
+                <div id="menu1" class="menu">
+                    <h1></br>Edit</h1></br>
+                    Enter Product Name  you want to edit <input type="text" placeholder="Enter Product Name">
+                </div>
+                <div id="menu" class="menu">
+                    <h1><center>ADD PRODUCT</h1>
+                      <object type="text/html" data="C:/Users/harsh/OneDrive/Desktop/New folder (2)/main.html" width="100%" height="100%"></object>
+                  Enter Product Name  <input type="text" placeholder="Enter Product Name">
+                </center>
+                </div>
+                <div id="menu2" class="menu">
+                    <h2></h2>
+                    <div class="container">
+                        <div class="title">ADD PRODUCT</div>
+                        <div class="content">
+                          <form onsubmit="return validateForm()" >
+                            <div class="user-details">
+                              <div class="input-box">
+                                <span class="details">Product Id</span>
+                                <input type="number" placeholder="Enter Product Id" id="p_id"  pattern="[0-99]" required>
+                                
+                              </div>
+                              <!--Changes in onkeypress-->
+                              <div class="input-box">
+                                <span class="details">Product Name</span>
+                                <input type="text" placeholder="Enter Product Name" id="P_name" onkeypress="return (event.charCode > 64 && 
+                                event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)|| (event.charCode == 32)" required>
+                              </div>
+                             
+                            
+                              <div class="input-box1 ">
+                                <span class="details">Stock</span><br>
+                              
+                                <input type="number" placeholder="KG" id="P_quantity"  required>
+                                <span id="error-message" style="color: red;"></span>
+                              </div>
+                              
+                             <div class="input-box1">
+                              <br>
+                                <input type="number" placeholder="Gram" id="P_quantity" >
+                                <span id="error-message" style="color: red;"></span>
+                              </div>
+                              <!--Changes in Category-->
+                              <div class="input-box">
+                                <span class="details">Category</span>
+                                <input list="Category" id="Category_" required><!--Hyat database madhe i guess ha id janar-->
+                                <datalist id="Category" required>
+                                
+                                    <option value="Nuts"></option>
+                                    <option value="Seeds"></option>
+                                    <option value="Dried Fruits"></option>
+                                    <option value="Dates"></option>
+                                    <option value="Seedless"></option>
+                                </datalist>
+                                 
+                              </div>
+                              <div class="input-box">
+                                <span class="details">Price for 250g</span>
+                                <input type="number" placeholder="Enter Price" id="p_price"  required>
+                                <span id="error-message1" style="color: red;"></span>
+                              </div>
+                              <div class="input-box">
+                                <span class="details">Price for 500g</span>
+                                <input type="number" placeholder="Enter Price" id="p_price"  required>
+                                <span id="error-message1" style="color: red;"></span>
+                              </div>
+                              <div class="input-box">
+                                <span class="details">Price for 1kg</span>
+                                <input type="number" placeholder="Enter Price" id="p_price"  required>
+                                <span id="error-message1" style="color: red;"></span>
+                              </div>
+                              <div class="input-box">
+                                <span class="details">Discount&nbsp;&nbsp;&nbsp;(in %)</span>
+                               <input type="number" step=0.01 placeholder="Enter Discount" id="discount">
+                                <span id="error-message2" style="color: red;"></span>
+                              </div>
+                            
+                              <div class="input-box">
+                                <span class="details">Photo</span>
+                              <input type="file" id="p_photo" name="filename" required>
+                             
+                              </div>
+                                <div class="input-box">
+                                  <span class="details">Description</span>
+                                  <textarea rows="3" cols="80" id="p_des" placeholder="Enter Description" required ></textarea>
+                                  <span id="error-message3" style="color: red;"></span>
+                                </div>
+                            </div>
+                           
+                                <div class="button">
+                                  <input type="submit" value="ADD" id="submit">
+                                </div>
+                              </div>
+                            </div>
+                         
+                          </form>
+                          
+            </div>
+        </main>
+      </div>
+       
+      <footer class="footer">
+            
+        <div class="foot-container">
+           
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#"> About us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">Bulk Order</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Address</h4>
+                   <p>
+                       Shop No.14, Plot No.19, Sea Crown Charkop,
+                        Sector 8, Kandivali West, Mumbai,
+                       Maharashtra 400067, India
+                   </p>
+                </div>
+                <div class="footer-col">
+                   <br><br>
+                    <ul>
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.5285149303604!2d72.81701917466863!3d19.215784847570365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b79e893734df%3A0x39419900d5e49798!2sDG%20Cashew%20Traders!5e0!3m2!1sen!2sin!4v1708527376452!5m2!1sen!2sin" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact us</h4>
+                    <div class="social-links">
+                     
+                        <a href="https://wa.me/p/5716250431821968/918433822411" target="2"><i class="fab fa-whatsapp" ></i></a>
+                        <a href="https://www.instagram.com/dgcashewtraders?igsh=YnpqZDh2Mm91NXZx" target="1"><i class="fab fa-instagram"></i></a>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+    <script src="../Javascript/index.js"></script>
+</body>
+</html>

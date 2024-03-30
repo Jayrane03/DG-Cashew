@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../Styles/orderdetails.css">
+</head>
+<body onload="showForm('Cod')">
+    <div class="header-main">
+        <div class="container">
+            <a href="" class="header-logo">
+                <img src="../Images/logo.jpg" alt="logo" width="120" height="36" onclick="toggleSection1('banner')"> 
+            </a>   
+        </div>
+    </div>
+    <form onsubmit="return validateForm()">
+        <br><br><br><br><br>
+        <div class="container">
+            <div class="form-section">
+                <h2 style="color: rgb(6, 86, 108);">Customer Details</h2>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span id="error-message" style="color: red;"></span>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Address <input type="checkbox"><span style="font-weight: 100; font-size: small;">Make this as permanent address</span></label>
+                    <input type="text" id="add1" name="add1" placeholder="Room no, Building name, Society name" required><br><br>
+                    <input type="text" id="add2" name="add2" placeholder="Street name, Area name, locality" required><br><br>
+                    <input type="text" id="add3" name="add3" placeholder="landmark"><br><br>
+                    <input type="text" id="add4" name="add4" placeholder="Pincode"><br><br>
+                    <label for="city">City/District</label>
+                    <select name="city" id="city" required>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Thane">Thane</option>
+                        <option value="Navi Mumbai">Navi Mumbai</option>
+                        <option value="Palghar">Palghar</option>
+                    </select>
+                </div>
+                <label for="type_d"> 
+                    <input type="radio" id="type_d_home" name="type_d">
+                    Home address
+                </label>
+                <label for="type_d"> 
+                    <input type="radio" id="type_d_office" name="type_d">
+                    Office Address (Delivery Time: 11 A.M to 5 P.M)
+                </label>
+            </div>
+            <div class="form-section">
+                <h2 style="color: rgb(6, 86, 108);">Payment Details</h2>
+                <button onclick="showForm('Cod')" id="COD">Cash On Delivery</button>
+                <button onclick="showForm('paymentDetails')" id="Card">Card/UPI</button>
+                <div class="form-section-p" id="paymentDetails" style="display: none;">
+                    <div class="form-group payment-details">
+                        <label for="card">Payment method is Card/UPI</label>
+                    </div>
+                </div>
+                <div class="form-section-p" id="Cod" style="display: none;">
+                    <div class="form-group payment-details">
+                        <label for="card">Payment method is COD</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <center>
+            <input type="submit" id="submit" value="Confirm" style="width: 300px; height: 30px;">
+        </center>
+    </form>
+
+    <script>
+        function showForm(formId) {
+            var forms = document.querySelectorAll('.form-section-p');
+            forms.forEach(function(form) {
+                form.style.display = 'none';
+            });
+            document.getElementById(formId).style.display = 'block';
+        }
+
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var nameRegex = /^[a-zA-Z ]+$/;
+            var errorMessage = document.getElementById("error-message");
+            if (!nameRegex.test(name)) {
+                errorMessage.innerHTML = "Enter valid Name";
+                return false;
+            } else {
+                // If validation passes, submit the form
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
