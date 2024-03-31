@@ -366,13 +366,9 @@
       </div>
 
 
-      <div class="dry">
-
-        <object type="text/html" data="almond.html" width="100%" height="100%"></object>
-
-      </div>
+     
       <div class="foot">
-        <object type="text/html" data="footer.html" width="100%" height="100%"></object>
+        <object type="text/html" data="footer.html" width="100%" height="100%" style="overflow: hidden;"></object>
       </div>
 
     </div>
@@ -390,206 +386,16 @@
       </div>
       
     </div>-->
-    <div id="atc_sidebar">
-
-      <object type="text/html" data="addtocart.html" width="100%" height="700px"></object>
-
-      <button onclick="closeSidebar();toggleSections(['banner3'])" ; id="atc_close" class="atc_close">Proceed</button>
-      <!--Sidebar content goes here -->
-      <button id="close" onclick="closeSidebar()">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-    </div>
-    <div id="atc_overlay" onclick="closeSidebar()"></div>
+   
+  
 
 
 
-    <div class="banner2 hidden" id="banner2" style="z-index: 2;">
-      <object type="text/html" data="product.html" width="100%" height="200%"></object>
-      <object type="text/html" data="footer.html" width="100%" height="130%"></object>
-    </div>
-    <div class="banner3 hidden" id="banner3">
+ 
 
-      <body>
-        <div class="header-order">
-          <div class="container-order">
-            <a href="" class="header-logo">
-              <img src="C:\Users\harsh\OneDrive\Documents\DG Cashew Project\WhatsApp Image 2024-01-19 at 12.23.10.jpeg"
-                alt="logo" width="120" height="36" onclick="toggleSection1('banner')" style="margin-top: 19px;">
-            </a>
-          </div>
+   
 
-        </div>
-        <form onsubmit="return validation()">
-          <br><br><br><br><br>
-
-          <div class="container-order">
-            <div class="form-section">
-              <h2 style="color: rgb(6, 86, 108);">Customer Details</h2>
-              <div class="form-group-a">
-                <label for="name">Name:<span id="error-message" style="color: red;"></span></label>
-                <input type="text" id="name" name="name" onkeypress="return (event.charCode > 64 && 
-                event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)|| (event.charCode == 32)"
-                  title="Enter valid name" required>
-
-              </div>
-
-              <div class="form-group-a">
-                <label for="phone">Phone:</label>
-                <input type="text" pattern="[1-9]{1}[0-9]{9}" id="phone_no" name="phone" minlength="10" maxlength="10"
-                  title="Please enter 10 digits" required>
-              </div>
-              <div class="form-group-a">
-                <label for="phone">Address
-                  <p><input type="checkbox">
-                    <h7 style="font-weight: 100; font-size: small;">Make this as permanant address </h7>
-                  </p>
-                </label>
-                <input type="text" id="add1" name="add1" placeholder="Room no,Building name,Society name" required><br>
-                <input type="text" id="add2" name="add2" placeholder="Street name, Area name , locality" required><br>
-                <input type="text" id="add3" name="add3" placeholder="landmark"><br>
-                <input type="text" id="add3" name="add4" placeholder="Pincode" maxlength="6" minlength="6"><br>
-                <label for="phone">City/District</label>
-
-                <select name="locationSelect" id="locationSelect" required>
-                  <option value="">Choose address</option>
-                  <option value="Mumbai">Mumbai</option>
-                  <option value="Thane">Thane</option>
-                  <option value="Navi Mumbai">Navi Mumbai</option>
-                  <option value="Palghar">Palghar</option>
-                </select>
-                <div id="errorMessage" style="color: red;"></div>
-              </div>
-              <label for="address">Address type</label>
-              <input type="radio" name="type">
-              <p style="font-size:medium;">Home</p>
-              <input type="radio" name="type">
-              <p style="font-size:medium;">Office </p>
-            </div>
-            <div class="form-section">
-
-
-              <div class="row" style="border-top: 1px solid white; padding-top: 35px;">
-                <div class="col">
-                  <h2 style=" color: rgb(6, 86, 108);">Total Amount</h2>
-                </div>
-
-              </div>
-              <div class="row" style="border-top: 1px solid white;padding-top: 6px;">
-                <div class="col">PRICE (&#x20B9;)</div>
-                <div class="col text-right" style="padding-left: 109px;" id="price_pr"> 137</div>
-              </div>
-              <div class="row" style="border-top: 1px solid white;  ">
-                <div class="delivery charge" id="delivery charge">Delivery Charges (&#x20B9;)</div>
-                <div class="col text-right" style="padding-left: 5px;">
-                  <input type="text" id="dc" style="color: black; border: none;" readonly>
-                </div>
-              </div>
-              <div class="row" style="border-top: 3px solidrgb(5, 5, 5)e; padding: 2vh 0;">
-                <div class="col">Total Price (&#x20B9;)</div>
-                <div class="col text-right" style="padding-left: 65px;" id="total_pr"><input type="text" id="total_pr"
-                    style="color: black; border: none;" readonly></div>
-              </div>
-              <div class="row" style="border-top: 3px solidrgb(5, 5, 5)e; padding:7px;">
-                <h2 style="color: rgb(6, 86, 108);">Payment Details</h2>
-                <select name="payment" id="payment" required>
-                  <option value="Cash on Delivery">Cash on Delivery</option>
-                  <option value="UPI/Net banking">UPI/Net banking</option>
-                </select>
-              </div>
-            </div>
-
-
-
-          </div>
-          <br><br>
-          <center>
-            <input type="submit" id="submit" value="Confirm" style="width: 300px; height: 30px; "
-              onclick="validation()">
-          </center>
-        </form>
-      </body>
-
-      <script>
-        function showForm(formId) {
-          var forms = document.querySelectorAll('.form-section-p');
-          forms.forEach(function (form) {
-            form.style.display = 'none';
-          });
-          document.getElementById(formId).style.display = 'block';
-        }
-        function dis() {
-          alert("Your payment method is: ");
-          windows.location.form("main.html");; // Replace "nextpage.html" with the URL of the next page
-        }
-
-        function validation() {
-          var name = document.getElementById("name").value;
-          var nameRegex = /^[a-zA-Z ]+$/;
-          var pno = document.getElementById("phone_no");
-
-          var em = document.getElementById("error-message");
-          if (pno.lenght !== 10) {
-            errorElement.innerHTML = "Enter valid no";
-          }
-          else {
-            toggleSection1('banner');
-          }
-
-        }
-        function calculateTotal() {
-
-          var input1 = parseFloat(document.getElementById("price_pr").value);
-          var input2 = parseFloat(document.getElementById("dc").value);
-
-          var total = input1 + input2;
-
-
-          document.getElementById("total_pr").textContent = total;
-        }
-
-
-        var locationSelect = document.getElementById("locationSelect");
-        var deliveryChargesInput = document.getElementById("dc");
-        var errorMessage = document.getElementById("errorMessage");
-
-        // Define delivery charges for each location
-        var deliveryCharges = {
-          "Mumbai": 20,
-          "Thane": 35,
-          "Palghar": 30,
-          "Navi Mumbai": 40
-          // Add more locations and charges as needed
-        };
-
-        // Function to update delivery charges input based on selected location
-        function updateDeliveryCharges() {
-          var selectedLocation = locationSelect.value;
-          if (selectedLocation !== "") {
-            var charges = deliveryCharges[selectedLocation];
-            if (charges !== undefined) {
-              deliveryChargesInput.value = charges;
-              errorMessage.textContent = ""; // Clear error message if location is selected
-
-            } else {
-              deliveryChargesInput.value = "select city"; // Or any default value
-            }
-          } else {
-            deliveryChargesInput.value = ""; // Clear the input if no location is selected
-            errorMessage.textContent = "Please select a location"; // Show error message
-          }
-          calculateTotal();
-        }
-
-        // Listen for the change event on the select element
-        locationSelect.addEventListener("change", updateDeliveryCharges);
-
-        // Call the function once to set initial delivery charges
-        updateDeliveryCharges();
-
-
-
-      </script>
+    
 
     </div>
 
@@ -597,11 +403,72 @@
 
   </div>
 
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script src="../Javascript/main.js"></script>
   <script>
+    function toCart(){
+      window.location.href="addtocart.html"
+  }
+  // Function to initialize the cart count when the page loads
+  window.addEventListener('DOMContentLoaded', function() {
+      updateCartCount();
+  });
 
+  // Update the cart count to the number of items added in the cart
+  function updateCartCount() {
+      // Retrieve cart items from local storage
+      var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+      
+      // Calculate the total number of items in the cart
+      var totalCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+      // Update the cart count in the header
+      var cartCount = document.getElementById('cart-count');
+      if (cartCount) {
+          cartCount.textContent = totalCount;
+      }
+  }
+  
+  // Add to Cart Function
+  function addToCart(button) {
+      // Retrieve cart items from local storage
+      var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  
+      // Traverse the DOM to find the product information related to the clicked button
+      var productCard = button.closest('.product-card');
+      var productName = productCard.querySelector('h3');
+      var productPrice = productCard.querySelector('p');
+      var productImage = productCard.querySelector('img');
+  
+      // Check if all required elements are found
+      if (productName && productPrice && productImage) {
+          // Create an object to store product information
+          var product = {
+              id: cartItems.length + 1, // Generate a unique ID
+              name: productName.textContent,
+              price: productPrice.textContent,
+              image: productImage.src,
+              quantity: 1 // Set default quantity to 1
+          };
+  
+          // Add product to cart
+          cartItems.push(product);
+  
+          // Store updated cart in local storage
+          localStorage.setItem('cart', JSON.stringify(cartItems));
+  
+          // Update the cart count in the header
+          updateCartCount();
+  
+          // Redirect to cart.html
+          window.location.href = "addtocart.html";
+      } else {
+          console.error('Product information not found.');
+      }
+  }
+  
     window.addEventListener('DOMContentLoaded', function() {
       updateCartCount();
   });

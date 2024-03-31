@@ -213,5 +213,5 @@ locationSelect.addEventListener("change", updateDeliveryCharges);
 // Call the function once to set initial delivery charges
 updateDeliveryCharges();
 function toLogin(){
-  window.location.href="store.html"
+  window.location.href="login.html"
 }
