@@ -1,0 +1,105 @@
+/* Add this CSS to your existing CSS file or style tag */
+.toggle-bar{display: none !important;}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    /* Hide the desktop menu */
+    .desktop-menu-category-list {
+      display: none;
+    }
+  
+    /* Show the toggle button */
+    .toggle-bar {
+    position: absolute;
+    right: 1%;
+      display: block !important;
+    }
+  
+    /* Position the toggle button */
+    .toggle-bar {
+      position: absolute;
+     
+      z-index: 999;
+    }
+  
+    /* Position and style the side menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      transition: left 0.3s ease;
+      z-index: 998;
+      padding-top: 60px;
+    }
+  
+    /* Show the side menu when the toggle button is clicked */
+    .show-menu .mobile-menu {
+      left: 0;
+    }
+  
+    /* Style for the links in the side menu */
+    .mobile-menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .menu-category {
+      margin-bottom: 15px;
+    }
+  
+    .menu-title {
+      display: block;
+      padding: 10px 15px;
+      color: #333;
+      text-decoration: none;
+    }
+  
+    .menu-title:hover {
+      background-color: #f0f0f0;
+    }
+ 
+  /* Contact form */
+  .about_right {
+    position: absolute;
+    top: 30%;
+    right: 8%;
+    width: 85vw;
+    color: whitesmoke;
+    text-align: center;
+}
+.about_footer{
+  height: 104vh !important;
+}
+
+/* main Banner */
+.slider-container {
+    height: 100vh;
+    width: 100vw;;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    border-radius: var(--border-radius-md);
+    overflow: auto hidden;
+    scroll-snap-type: inline mandatory;
+    overscroll-behavior-inline: contain;
+}
+
+
+
+.footer{
+    margin-top: 350%;
+    position: absolute;
+    bottom: 0 !important;
+    height: 105vh !important;
+}
+}
+
+
+  
+
+  /* Contact form */

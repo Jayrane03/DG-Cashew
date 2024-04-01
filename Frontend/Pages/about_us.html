@@ -2,51 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <link rel="stylesheet" href="../Styles/style-main.css">
     <link rel="stylesheet" href="../Styles/about.css">
+    <link rel="stylesheet" href="../Styles/media_query.css">
     <link rel="stylesheet" href="../Styles/footer.css">
     <script src="https://kit.fontawesome.com/bc12f67c88.js" crossorigin="anonymous"></script>
     <title>About Us</title>
 </head>
 <body>
-    <section class="store">
-        <div class="store_cont">
-            <div class="header-main">
-                <div class="container">
-                  <a href="#" class="header-logo">
-                    <img src="../Images/logo.jpg"
-                      alt="logo" width="95" height="53" >
-                  </a>
-                  <div class="header-search-container">
-                    <ul class="desktop-menu-category-list">
-                      <li class="menu-category">
-                        <a href="../Home/main.html" class="menu-title active">Home</a>
-                      </li>
-                      <li class="menu-category">
-                        <a href="../Pages/about_us.html" class="menu-title">About Us</a>
-                      </li>
-                      <li class="menu-category">
-                        <a href="../Pages/store.html" class="menu-title">Store</a>
-                      </li>
-                      <li class="menu-category">
-                        <a href="../Pages/contact.html" class="menu-title">Contact Us</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="header-user-actions">
-                    <button class="login" onclick="toLogin()">
-                      Login/Signup
-                    </button>
-                    <button class="action-btn" id="cart_1" onclick="toCart()">
-                      <ion-icon name="bag-handle-outline"></ion-icon>
-                      <span class="count" id="cart-count">0</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+  <div class="header-main">
+    <div class="toggle-bar d-none" onclick="toggleMenu()">
+      <ion-icon name="menu-outline" class="ham_icon"></ion-icon>
+    </div>
+      <div class="container">
+        <a href="#" class="header-logo">
+          <img src="../Images/logo.jpg"
+            alt="logo" width="95" height="53" >
+        </a>
+        <div class="header-search-container">
+          <ul class="desktop-menu-category-list">
+            <li class="menu-category">
+              <a href="../Home/main.html" class="menu-title active">Home</a>
+            </li>
+            <li class="menu-category">
+              <a href="../Pages/about_us.html" class="menu-title">About Us</a>
+            </li>
+            <li class="menu-category">
+              <a href="../Pages/store.html" class="menu-title">Store</a>
+            </li>
+            <li class="menu-category">
+              <a href="../Pages/contact.html" class="menu-title">Contact Us</a>
+            </li>
+          </ul>
         </div>
-    </section>
+        <div class="header-user-actions">
+          <button class="login" onclick="toLogin()">
+            Login/Signup
+          </button>
+          <button class="action-btn" id="cart_1" onclick="toCart()">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count" id="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
     <div class="about_container">
       <div class="about_row">
         <div class="about_left">
@@ -60,7 +61,7 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="footer about_footer  ">
       <div class="foot-container">
           <div class="foot-row">
               <div class="footer-col">

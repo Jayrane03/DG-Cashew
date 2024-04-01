@@ -7,15 +7,8 @@ function toLogin(){
 function toCart(){
   window.location.href="/Frontend/Pages/addtocart.html"
 }
-function toggleMenu() {
-  var mobileMenu = document.getElementById("mobileMenu");
 
-  if (mobileMenu.style.display === "block") {
-    mobileMenu.style.transform = "translateX(400px)";
-  } else {
-    mobileMenu.style.transform = "translateX(-200px)";
-  }
-}
+
 
 const mobileMenuOpenBtn = document.querySelectorAll('[data-mobile-menu-open-btn]');
 const mobileMenu = document.querySelectorAll('[data-mobile-menu]');
