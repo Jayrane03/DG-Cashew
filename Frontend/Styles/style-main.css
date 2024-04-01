@@ -617,6 +617,13 @@ color: black;
   .foot{
     height:246px;
   }
+  #foo{
+    position: absolute  ;
+      display: flex;
+      justify-content: flex-end;
+       
+  }
+  
   .dry{
     height:500px;
   
