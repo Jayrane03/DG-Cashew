@@ -10,15 +10,62 @@
   <link rel="stylesheet" href="../Styles/footer.css">
   <script src="https://kit.fontawesome.com/bc12f67c88.js" crossorigin="anonymous"></script>
 </head>
+<title>DG Cashew</title>
+<style>
+  /* Sidebar menu styles */
+  .sidebar-menu {
+      display: none;
+      position: fixed;
+      top: 10%;
+      right: 0;
+      text-align: center;
+      height: 100vh;
+      width: 250px;
+      background-color: rgb(6, 86, 108);
+      padding-top: 60px;
+      z-index: 1000;
+      overflow-x: hidden;
+      transition: 0.5s;
+  }
+  .sidebar-menu.open{
+    right: -250px;
+  }
 
+  .sidebar-menu a {
+      padding: 20px;
+      margin: 20px 0;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      transition: 0.3s;
+  }
+
+  .sidebar-menu a:hover {
+      background-color: #555;
+  }
+
+  /* Show sidebar menu for small screens */
+  @media screen and (max-width: 768px) {
+      .sidebar-menu {
+          display: block;
+      }
+  }
+</style>
 <body>
   <section class="main">
     <div class="overlay" data-overlay></div>
     <header class="header">
       <div class="header-main">
-        <div class="toggle-bar d-none" onclick="toggleMenu()">
+        <div class="toggle-bar d-none" onclick="toggleSidebar()">
           <ion-icon name="menu-outline" class="ham_icon"></ion-icon>
         </div>
+        <div class="sidebar-menu"> <!-- Sidebar menu starts here -->
+            <a href="../Home/main.html" class="menu-title active">Home</a>
+            <a href="../Pages/about_us.html" class="menu-title">About Us</a>
+            <a href="../Pages/store.html" class="menu-title">Store</a>
+            <a href="../Pages/contact.html" class="menu-title">Contact Us</a>
+        </div> 
         <div class="container">
           <a href="#" class="header-logo">
             <img src="../Images/logo.jpg"

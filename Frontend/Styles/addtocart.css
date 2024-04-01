@@ -85,6 +85,8 @@
 }
 
 .cart-item {
+    height: 30vh;
+    /* background-color: #dc3545 !important; */
     display: flex;
     align-items: center;
     margin-bottom: 20px;

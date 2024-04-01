@@ -60,6 +60,9 @@
     .menu-title:hover {
       background-color: #f0f0f0;
     }
+    .pro-row{
+      flex-direction: column;
+    }
  
   /* Contact form */
   .about_right {
@@ -71,7 +74,48 @@
     text-align: center;
 }
 .about_footer{
+  position: absolute;
+  bottom: 0;
+  margin-top: 0 !important;
   height: 104vh !important;
+}
+.contact-footer{
+  margin-top: 180% !important;
+}
+
+.main_footer{
+  position: absolute !important;
+  margin-top: 0 !important;
+}
+.cart-footer{
+  margin-top: 0 !important;
+}
+
+.store_foot{
+  margin-top: 1020% !important;
+}
+/* Add a border to each cart item */
+ #cartItems .cart-item {
+flex-direction:  column !important;
+height: 50vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 10px;
+  align-items: center !important;
+}
+
+/* Toogle */
+.desktop-menu-category-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, transform 0.3s ease; /* Add transition for transform */
+  transform-origin: top; /* Set transform origin to top */
+  transform: scaleY(0); /* Initially scale the menu to 0 vertically */
+}
+
+.desktop-menu-category-list.show-menu {
+  max-height: 200px; /* Set the maximum height according to your menu's content */
+  transform: scaleY(1); /* Scale the menu back to its original height */
 }
 
 /* main Banner */

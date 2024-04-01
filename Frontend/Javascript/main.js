@@ -7,8 +7,21 @@ function toLogin(){
 function toCart(){
   window.location.href="/Frontend/Pages/addtocart.html"
 }
+// Function to toggle the menu visibility
+function toggleSidebar() {
+  var sidebar = document.querySelector('.sidebar-menu');
+  sidebar.classList.toggle('open'); // Toggle the 'open' class
+}
 
-
+// Function to close the sidebar menu when clicking outside of it
+window.addEventListener('click', function(event) {
+  var sidebar = document.querySelector('.sidebar-menu');
+  var toggleBar = document.querySelector('.toggle-bar');
+  // Check if the clicked element is not the sidebar or toggle bar
+  if (!sidebar.contains(event.target) && !toggleBar.contains(event.target)) {
+    sidebar.classList.remove('open'); // Close the sidebar
+  }
+});
 
 const mobileMenuOpenBtn = document.querySelectorAll('[data-mobile-menu-open-btn]');
 const mobileMenu = document.querySelectorAll('[data-mobile-menu]');

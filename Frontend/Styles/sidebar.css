@@ -1,0 +1,41 @@
+<style>
+/* Sidebar menu styles */
+.sidebar-menu {
+    display: none;
+    position: fixed;
+    top: 10%;
+    right: 0;
+    text-align: center;
+    height: 100vh;
+    width: 250px;
+    background-color: rgb(6, 86, 108);
+    padding-top: 60px;
+    z-index: 1000;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.sidebar-menu.open{
+  right: -250px;
+}
+
+.sidebar-menu a {
+    padding: 20px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar-menu a:hover {
+    background-color: #555;
+}
+
+/* Show sidebar menu for small screens */
+@media screen and (max-width: 768px) {
+    .sidebar-menu {
+        display: block;
+    }
+}
+</style>

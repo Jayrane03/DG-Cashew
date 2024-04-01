@@ -10,237 +10,276 @@
     <link rel="stylesheet" href="../Styles/footer.css">
     <script src="https://kit.fontawesome.com/bc12f67c88.js" crossorigin="anonymous"></script>
     <title>About Us</title>
+    <style>
+        /* Sidebar menu styles */
+        .sidebar-menu {
+            display: none;
+            position: fixed;
+            top: 10%;
+            right: -250px;
+            text-align: center;
+            height: 100vh;
+            width: 250px;
+            background-color: rgb(6, 86, 108);
+            padding-top: 60px;
+            z-index: 1000;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+        .sidebar-menu.open{
+          right: 0px;
+        }
+         
+
+        .sidebar-menu a {
+            padding: 20px;
+            margin: 20px 0;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar-menu a:hover {
+            background-color: #555;
+        }
+
+        /* Show sidebar menu for small screens */
+        @media screen and (max-width: 768px) {
+            .sidebar-menu {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
   <div class="header-main">
-    <div class="toggle-bar d-none" onclick="toggleMenu()">
+    <div class="toggle-bar d-none" onclick="toggleSidebar()">
       <ion-icon name="menu-outline" class="ham_icon"></ion-icon>
     </div>
-      <div class="container">
+    <div class="sidebar-menu"> <!-- Sidebar menu starts here -->
+        <a href="../Home/main.html" class="menu-title active">Home</a>
+        <a href="../Pages/about_us.html" class="menu-title">About Us</a>
+        <a href="../Pages/store.html" class="menu-title">Store</a>
+        <a href="../Pages/contact.html" class="menu-title">Contact Us</a>
+    </div> <!-- Sidebar menu ends here -->
+    <div class="container">
         <a href="#" class="header-logo">
-          <img src="../Images/logo.jpg"
-            alt="logo" width="95" height="53" >
+            <img src="../Images/logo.jpg" alt="logo" width="95" height="53">
         </a>
         <div class="header-search-container">
-          <ul class="desktop-menu-category-list">
-            <li class="menu-category">
-              <a href="../Home/main.html" class="menu-title active">Home</a>
-            </li>
-            <li class="menu-category">
-              <a href="../Pages/about_us.html" class="menu-title">About Us</a>
-            </li>
-            <li class="menu-category">
-              <a href="../Pages/store.html" class="menu-title">Store</a>
-            </li>
-            <li class="menu-category">
-              <a href="../Pages/contact.html" class="menu-title">Contact Us</a>
-            </li>
-          </ul>
+            <ul class="desktop-menu-category-list">
+                <li class="menu-category">
+                    <a href="../Home/main.html" class="menu-title active">Home</a>
+                </li>
+                <li class="menu-category">
+                    <a href="../Pages/about_us.html" class="menu-title">About Us</a>
+                </li>
+                <li class="menu-category">
+                    <a href="../Pages/store.html" class="menu-title">Store</a>
+                </li>
+                <li class="menu-category">
+                    <a href="../Pages/contact.html" class="menu-title">Contact Us</a>
+                </li>
+            </ul>
         </div>
         <div class="header-user-actions">
-          <button class="login" onclick="toLogin()">
-            Login/Signup
-          </button>
-          <button class="action-btn" id="cart_1" onclick="toCart()">
-            <ion-icon name="bag-handle-outline"></ion-icon>
-            <span class="count" id="cart-count">0</span>
-          </button>
+            <button class="login" onclick="toLogin()">
+                Login/Signup
+            </button>
+            <button class="action-btn" id="cart_1" onclick="toCart()">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+                <span class="count" id="cart-count">0</span>
+            </button>
         </div>
-      </div>
     </div>
-    <div class="about_container">
-      <div class="about_row">
-        <div class="about_left">
-         
-        </div>
+  </div>
+  <div class="about_container">
+    <div class="about_row">
+        <div class="about_left"></div>
         <div class="about_right">
-          <div class="about_info">
-            <h2>DG Cashew</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente tempora autem officiis perferendis quod soluta incidunt quaerat iure, voluptatem libero sint suscipit Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore non nostrum debitis consectetur at deleniti ut totam repellat molestias saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora aliquid quas harum?</p>
-          </div>
+            <div class="about_info">
+                <h2>DG Cashew</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente tempora autem officiis perferendis quod soluta incidunt quaerat iure, voluptatem libero sint suscipit.</p>
+            </div>
         </div>
-      </div>
     </div>
-    <footer class="footer about_footer  ">
-      <div class="foot-container">
-          <div class="foot-row">
-              <div class="footer-col">
-                  <h4>Company</h4>
-                  <ul>
-                      <li><a href="#">About us</a></li>
-                      <li><a href="#">Our services</a></li>
-                      <li><a href="#">Bulk Order</a></li>
-                      <li><a href="#">Terms and Conditions</a></li>
-                  </ul>
-              </div>
-              <div class="footer-col">
-                  <h4>Address</h4>
-                  <p>
-                      Shop No.14, Plot No.19, Sea Crown Charkop,
-                      Sector 8, Kandivali West, Mumbai,
-                      Maharashtra 400067, India
-                  </p>
-              </div>
-              <div class="footer-col">
-                  <h4>Location</h4>
-                  <ul>
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.5285149303604!2d72.81701917466863!3d19.215784847570365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b79e893734df%3A0x39419900d5e49798!2sDG%20Cashew%20Traders!5e0!3m2!1sen!2sin!4v1708527376452!5m2!1sen!2sin" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  </ul>
-              </div>
-              <div class="footer-col">
-                  <h4>Contact us</h4>
-                  <div class="social-links">
-                      <a href="https://wa.me/p/5716250431821968/918433822411" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                      <a href="https://www.instagram.com/dgcashewtraders?igsh=YnpqZDh2Mm91NXZx" target="_blank"><i class="fab fa-instagram"></i></a>
-                  </div>
-              </div>
-          </div>
-      </div>
+  </div>
+  <footer class="footer about_footer">
+    <div class="foot-container">
+        <div class="foot-row">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Our services</a></li>
+                    <li><a href="#">Bulk Order</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Address</h4>
+                <p>Shop No.14, Plot No.19, Sea Crown Charkop, Sector 8, Kandivali West, Mumbai, Maharashtra 400067, India</p>
+            </div>
+            <div class="footer-col">
+                <h4>Location</h4>
+                <ul>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.5285149303604!2d72.81701917466863!3d19.215784847570365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b79e893734df%3A0x39419900d5e49798!2sDG%20Cashew%20Traders!5e0!3m2!1sen!2sin!4v1708527376452!5m2!1sen!2sin" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact us</h4>
+                <div class="social-links">
+                    <a href="https://wa.me/p/5716250431821968/918433822411" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/dgcashewtraders?igsh=YnpqZDh2Mm91NXZx" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
   </footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script>
-      function toCart(){
-        window.location.href="/Frontend/Pages/addtocart.html"
+  <script src="../Javascript/main.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    function toCart(){
+      window.location.href="/Frontend/Pages/addtocart.html"
     }
     function toLogin(){
       window.location.href="/Frontend/Pages/login.html"
     }
     // Function to initialize the cart count when the page loads
     window.addEventListener('DOMContentLoaded', function() {
-        updateCartCount();
+      updateCartCount();
     });
 
     // Update the cart count to the number of items added in the cart
     function updateCartCount() {
-        // Retrieve cart items from local storage
-        var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-        
-        // Calculate the total number of items in the cart
-        var totalCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+      // Retrieve cart items from local storage
+      var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+      
+      // Calculate the total number of items in the cart
+      var totalCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
-        // Update the cart count in the header
-        var cartCount = document.getElementById('cart-count');
-        if (cartCount) {
-            cartCount.textContent = totalCount;
-        }
+      // Update the cart count in the header
+      var cartCount = document.getElementById('cart-count');
+      if (cartCount) {
+        cartCount.textContent = totalCount;
+      }
     }
     
     // Add to Cart Function
     function addToCart(button) {
-        // Retrieve cart items from local storage
-        var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-    
-        // Traverse the DOM to find the product information related to the clicked button
-        var productCard = button.closest('.product-card');
-        var productName = productCard.querySelector('h3');
-        var productPrice = productCard.querySelector('p');
-        var productImage = productCard.querySelector('img');
-    
-        // Check if all required elements are found
-        if (productName && productPrice && productImage) {
-            // Create an object to store product information
-            var product = {
-                id: cartItems.length + 1, // Generate a unique ID
-                name: productName.textContent,
-                price: productPrice.textContent,
-                image: productImage.src,
-                quantity: 1 // Set default quantity to 1
-            };
-    
-            // Add product to cart
-            cartItems.push(product);
-    
-            // Store updated cart in local storage
-            localStorage.setItem('cart', JSON.stringify(cartItems));
-    
-            // Update the cart count in the header
-            updateCartCount();
-    
-            // Redirect to cart.html
-            window.location.href = "addtocart.html";
-        } else {
-            console.error('Product information not found.');
-        }
+      // Retrieve cart items from local storage
+      var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  
+      // Traverse the DOM to find the product information related to the clicked button
+      var productCard = button.closest('.product-card');
+      var productName = productCard.querySelector('h3');
+      var productPrice = productCard.querySelector('p');
+      var productImage = productCard.querySelector('img');
+  
+      // Check if all required elements are found
+      if (productName && productPrice && productImage) {
+        // Create an object to store product information
+        var product = {
+          id: cartItems.length + 1, // Generate a unique ID
+          name: productName.textContent,
+          price: productPrice.textContent,
+          image: productImage.src,
+          quantity: 1 // Set default quantity to 1
+        };
+  
+        // Add product to cart
+        cartItems.push(product);
+  
+        // Store updated cart in local storage
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+  
+        // Update the cart count in the header
+        updateCartCount();
+  
+        // Redirect to cart.html
+        window.location.href = "addtocart.html";
+      } else {
+        console.error('Product information not found.');
+      }
     }
-      function showForm(formId) {
-        var forms = document.querySelectorAll('.form-section-p');
-        forms.forEach(function (form) {
-          form.style.display = 'none';
-        });
-        document.getElementById(formId).style.display = 'block';
+    function showForm(formId) {
+      var forms = document.querySelectorAll('.form-section-p');
+      forms.forEach(function (form) {
+        form.style.display = 'none';
+      });
+      document.getElementById(formId).style.display = 'block';
+    }
+    function dis() {
+      alert("Your payment method is: ");
+      windows.location.form("main.html");; // Replace "nextpage.html" with the URL of the next page
+    }
+
+    function validation() {
+      var name = document.getElementById("name").value;
+      var nameRegex = /^[a-zA-Z ]+$/;
+      var pno = document.getElementById("phone_no");
+
+      var em = document.getElementById("error-message");
+      if (pno.lenght !== 10) {
+        errorElement.innerHTML = "Enter valid no";
       }
-      function dis() {
-        alert("Your payment method is: ");
-        windows.location.form("main.html");; // Replace "nextpage.html" with the URL of the next page
-      }
-
-      function validation() {
-        var name = document.getElementById("name").value;
-        var nameRegex = /^[a-zA-Z ]+$/;
-        var pno = document.getElementById("phone_no");
-
-        var em = document.getElementById("error-message");
-        if (pno.lenght !== 10) {
-          errorElement.innerHTML = "Enter valid no";
-        }
-        else {
-          toggleSection1('banner');
-        }
-
-      }
-      function calculateTotal() {
-
-        var input1 = parseFloat(document.getElementById("price_pr").value);
-        var input2 = parseFloat(document.getElementById("dc").value);
-
-        var total = input1 + input2;
-
-
-        document.getElementById("total_pr").textContent = total;
+      else {
+        toggleSection1('banner');
       }
 
+    }
+    function calculateTotal() {
 
-      var locationSelect = document.getElementById("locationSelect");
-      var deliveryChargesInput = document.getElementById("dc");
-      var errorMessage = document.getElementById("errorMessage");
+      var input1 = parseFloat(document.getElementById("price_pr").value);
+      var input2 = parseFloat(document.getElementById("dc").value);
 
-      // Define delivery charges for each location
-      var deliveryCharges = {
-        "Mumbai": 20,
-        "Thane": 35,
-        "Palghar": 30,
-        "Navi Mumbai": 40
-        // Add more locations and charges as needed
-      };
+      var total = input1 + input2;
 
-      // Function to update delivery charges input based on selected location
-      function updateDeliveryCharges() {
-        var selectedLocation = locationSelect.value;
-        if (selectedLocation !== "") {
-          var charges = deliveryCharges[selectedLocation];
-          if (charges !== undefined) {
-            deliveryChargesInput.value = charges;
-            errorMessage.textContent = ""; // Clear error message if location is selected
 
-          } else {
-            deliveryChargesInput.value = "select city"; // Or any default value
-          }
+      document.getElementById("total_pr").textContent = total;
+    }
+
+
+    var locationSelect = document.getElementById("locationSelect");
+    var deliveryChargesInput = document.getElementById("dc");
+    var errorMessage = document.getElementById("errorMessage");
+
+    // Define delivery charges for each location
+    var deliveryCharges = {
+      "Mumbai": 20,
+      "Thane": 35,
+      "Palghar": 30,
+      "Navi Mumbai": 40
+      // Add more locations and charges as needed
+    };
+
+    // Function to update delivery charges input based on selected location
+    function updateDeliveryCharges() {
+      var selectedLocation = locationSelect.value;
+      if (selectedLocation !== "") {
+        var charges = deliveryCharges[selectedLocation];
+        if (charges !== undefined) {
+          deliveryChargesInput.value = charges;
+          errorMessage.textContent = ""; // Clear error message if location is selected
+
         } else {
-          deliveryChargesInput.value = ""; // Clear the input if no location is selected
-          errorMessage.textContent = "Please select a location"; // Show error message
+          deliveryChargesInput.value = "select city"; // Or any default value
         }
-        calculateTotal();
+      } else {
+        deliveryChargesInput.value = ""; // Clear the input if no location is selected
+        errorMessage.textContent = "Please select a location"; // Show error message
       }
+      calculateTotal();
+    }
 
-      // Listen for the change event on the select element
-      locationSelect.addEventListener("change", updateDeliveryCharges);
+    // Listen for the change event on the select element
+    locationSelect.addEventListener("change", updateDeliveryCharges);
 
-      // Call the function once to set initial delivery charges
-      updateDeliveryCharges();
-
-
-
-    </script>
+    // Call the function once to set initial delivery charges
+    updateDeliveryCharges();
+  </script>
 </body>
 </html>

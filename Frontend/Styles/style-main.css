@@ -268,10 +268,6 @@ body {
   }
  
 /*header*/
-  .header-top,
-  .header-user-actions,
-  .desktop-navigation-menu { display: none;
- }
 
   .header-main {
     position: fixed;
@@ -1551,3 +1547,7 @@ z-index: 6;
 .navbar{
   background-color: rgb(6, 86, 108) !important;
 }
+
+/* Tooogle */
+/* CSS for menu transitions */
+
