@@ -73,6 +73,11 @@
     color: whitesmoke;
     text-align: center;
 }
+.banner, .banner2 {
+  position: absolute;
+  top: 11%;
+  width: 108vw;
+}
 .about_footer{
   position: absolute;
   bottom: 0;
