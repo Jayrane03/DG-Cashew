@@ -10,6 +10,9 @@
 .rows h2 {
     margin-bottom: 50px;
 }
+#store_head{
+    margin-top: 100px;
+}
 
 .pro-row{
     justify-content: center;

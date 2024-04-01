@@ -11,7 +11,7 @@ body {
 }
 /* Footer Styles */
 .footer {
-    margin-top:300px;
+
     background-color: rgb(6, 69, 87);   
     color: #fff;
     position: absolute !important;
@@ -23,7 +23,7 @@ body {
     padding: 50px 0;
 }
 .store_foot{
-    margin-top: 50%;
+    margin-top: 65%;
 }
 
 
