@@ -18,7 +18,7 @@
             <div class="container">
               <a href="#" class="header-logo">
                 <img src="../Images/logo.jpg"
-                  alt="logo" width="95" height="53" onclick="toggleSection1('banner')">
+                  alt="logo" width="95" height="53">
               </a>
               <div class="header-search-container">
                 <ul class="desktop-menu-category-list">
@@ -48,9 +48,7 @@
             </div>
           </div>
        
-    </section>
-    <section class="product-section">
-        <div class="product-section">
+          <div class="product-section">
             <div class="container">
                 <div class="rows">
                     <h2>Products</h2>
@@ -135,47 +133,47 @@
                 </div>
             </div>
         </div>
-    </section>
-    <footer class="footer">
-            
-        <div class="foot-container">
-           
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#"> About us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">Bulk Order</a></li>
-                        <li><a href="#">Terms and Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Address</h4>
-                   <p>
-                       Shop No.14, Plot No.19, Sea Crown Charkop,
-                        Sector 8, Kandivali West, Mumbai,
-                       Maharashtra 400067, India
-                   </p>
-                </div>
-                <div class="footer-col">
-                   <br><br>
-                    <ul>
-                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.5285149303604!2d72.81701917466863!3d19.215784847570365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b79e893734df%3A0x39419900d5e49798!2sDG%20Cashew%20Traders!5e0!3m2!1sen!2sin!4v1708527376452!5m2!1sen!2sin" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact us</h4>
-                    <div class="social-links">
-                     
-                        <a href="https://wa.me/p/5716250431821968/918433822411" target="2"><i class="fab fa-whatsapp" ></i></a>
-                        <a href="https://www.instagram.com/dgcashewtraders?igsh=YnpqZDh2Mm91NXZx" target="1"><i class="fab fa-instagram"></i></a>
-                      
+    
+        <footer class="footer store_foot">
+            <div class="foot-container">
+                <div class="foot-row">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Our services</a></li>
+                            <li><a href="#">Bulk Order</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Address</h4>
+                        <p>
+                            Shop No.14, Plot No.19, Sea Crown Charkop,
+                            Sector 8, Kandivali West, Mumbai,
+                            Maharashtra 400067, India
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Location</h4>
+                        <ul>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.5285149303604!2d72.81701917466863!3d19.215784847570365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b79e893734df%3A0x39419900d5e49798!2sDG%20Cashew%20Traders!5e0!3m2!1sen!2sin!4v1708527376452!5m2!1sen!2sin" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact us</h4>
+                        <div class="social-links">
+                            <a href="https://wa.me/p/5716250431821968/918433822411" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/dgcashewtraders?igsh=YnpqZDh2Mm91NXZx" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-   </footer>
+        </footer>
+    </section>
+   
+  
+   
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -184,6 +182,9 @@
         function toCart(){
             window.location.href="addtocart.html"
         }
+        function toLogin(){
+            window.location.href="/Frontend/Pages/login.html"
+          }
         // Function to initialize the cart count when the page loads
         window.addEventListener('DOMContentLoaded', function() {
             updateCartCount();

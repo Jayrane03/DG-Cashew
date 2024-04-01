@@ -58,19 +58,4 @@
     color: #666; /* Set the color to a slightly lighter shade */
 }
 }
-.footer{
-    position: absolute;
 
-    top: 100%;
-    bottom: 0;
-    width: 100vw;
-    z-index: -1;
-    height: 100vh;
-   
-}
-.footer-row{
-
-    background-color: #333;
-    width: 100vw;
-    display: flex;
-}

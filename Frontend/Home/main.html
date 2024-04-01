@@ -15,7 +15,7 @@
     -->
   <link rel="stylesheet" href="../Styles/style-main.css">
   <link rel="stylesheet" href="../Styles/footer.css">
-  <link rel="stylesheet" href="../Styles/orderdetails.css">
+
   <!--
         - google font link
     -->
@@ -28,289 +28,52 @@
 </head>
 <title>Dg -Cashew</title>
 <body>
-  <div class="overlay" data-overlay></div>
+  <section class="main">
+
+    <div class="overlay" data-overlay></div>
 
   <header class="header">
     <div class="header-top">
-      <!--
-          - HEADER
-      
-
-      <div class="container">
-        <ul class="header-social-container">
-
-
-          <li>
-            <a href="https://www.instagram.com/dgcashewtraders?igsh=YnpqZDh2Mm91NXZx" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a href="wa.me//918433822411" class="social-link">
-              <ion-icon name="logo-whatsapp"></ion-icon>
-            </a>
-          </li>
-        </ul>
-        <div class="header-alert-news">
-          <p>
-            <b>Free Shipping</b>
-            This Week Order Over -1000/-
-          </p>
-        </div>
-      </div>
-      -->
       <div class="header-main">
         <div class="container">
-          <a href="" class="header-logo">
+          <a href="#" class="header-logo">
             <img src="../Images/logo.jpg"
               alt="logo" width="95" height="53" onclick="toggleSection1('banner')">
           </a>
           <div class="header-search-container">
             <ul class="desktop-menu-category-list">
               <li class="menu-category">
-                <a href="main.html" class="menu-title" " active>Home</a>
+                <a href="../Home/main.html" class="menu-title active">Home</a>
               </li>
               <li class="menu-category">
-                <a href="../Pages/about_us.html" class="menu-title" onclick="toggleSections(['banner2'])">About Us</a>
+                <a href="../Pages/about_us.html" class="menu-title">About Us</a>
               </li>
               <li class="menu-category">
-                <a href="../Pages/store.html" class="menu-title" >Store</a>
+                <a href="../Pages/store.html" class="menu-title">Store</a>
               </li>
               <li class="menu-category">
-                <a href="../Pages/contact.html" class="menu-title" onclick="toggleSections(['banner2'])">Contact Us</a>
+                <a href="../Pages/contact.html" class="menu-title">Contact Us</a>
               </li>
-  
-           
-             
-             
-              
             </ul>
-
-         
           </div>
           <div class="header-user-actions">
             <button class="login" onclick="toLogin()">
               Login/Signup
             </button>
-
-            
-            <button class="action-btn" id="cart_1" onclick="openSidebar()">
+            <button class="action-btn" id="cart_1" onclick="toCart()">
               <ion-icon name="bag-handle-outline"></ion-icon>
               <span class="count" id="cart-count">0</span>
             </button>
           </div>
         </div>
+      </div>  
+      
       </div>
-      <!--bottom header-->
+    
   
-      <!--after minimize bottom bar-->
-      <div class="mobile-bottom-navigation">
+    
 
-        <button class="action-btn" data-mobile-menu-open-btn>
-          <ion-icon name="menu-outline"></ion-icon>
-        </button>
-
-        <button class="action-btn" id="cart" onclick="openSidebar()">
-          <ion-icon name="bag-handle-outline"></ion-icon>
-          <span class="count">0</span>
-        </button>
-
-
-
-        <button class="action-btn" onclick="toggleSections(['banner2'])">
-          <ion-icon name="heart-outline"></ion-icon>
-          <span class="count">0</span>
-        </button>
-
-        <button class="action-btn" data-mobile-menu-open-btn>
-          <ion-icon name="grid-outline"></ion-icon>
-        </button>
-
-      </div>
-
-      <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
-
-        <div class="menu-top">
-          <h2 class="menu-title">Menu</h2>
-
-          <button class="menu-close-btn" data-mobile-menu-close-btn>
-            <ion-icon name="close-outline"></ion-icon>
-          </button>
-        </div>
-
-        <ul class="mobile-menu-category-list">
-
-          <li class="menu-category">
-            <a href="" class="menu-title" onclick="toggleSection1('banner')">Home</a>
-          </li>
-
-          <li class="menu-category">
-
-            <button class="accordion-menu" data-accordion-btn>
-              <p class="menu-title">Nuts</p>
-
-              <div>
-                <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-              </div>
-            </button>
-
-            <ul class="submenu-category-list" data-accordion>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">cashew-Big</a>
-              </li>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">Cashew-small</a>
-              </li>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">Cashew-Pakli tukda</a>
-              </li>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">Cashew-tukda small</a>
-              </li>
-
-            </ul>
-
-          </li>
-
-          <li class="menu-category">
-
-            <button class="accordion-menu" data-accordion-btn>
-              <p class="menu-title">seeds</p>
-
-              <div>
-                <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-              </div>
-            </button>
-
-            <ul class="submenu-category-list" data-accordion>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">pumpkin</a>
-              </li>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">sunflower</a>
-              </li>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">apricot</a>
-              </li>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">magaj</a>
-              </li>
-
-            </ul>
-
-          </li>
-
-          <li class="menu-category">
-
-            <button class="accordion-menu" data-accordion-btn>
-              <p class="menu-title">dried fruits</p>
-
-              <div>
-                <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-              </div>
-            </button>
-
-            <ul class="submenu-category-list" data-accordion>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">kishmish-golden</a>
-              </li>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">kishmish-black</a>
-              </li>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">kishmish-black-seedless</a>
-              </li>
-
-
-
-            </ul>
-
-          </li>
-
-          <li class="menu-category">
-
-            <button class="accordion-menu" data-accordion-btn>
-              <p class="menu-title">dates</p>
-
-              <div>
-                <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-              </div>
-            </button>
-
-            <ul class="submenu-category-list" data-accordion>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">khajoor-kalmi</a>
-              </li>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">khajoor-ajwa</a>
-              </li>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">khajoor-magrum</a>
-              </li>
-
-              <li class="submenu-category">
-                <a href="#" class="submenu-title">khajoor-black</a>
-              </li>
-
-            </ul>
-
-          </li>
-
-          <li class="menu-category">
-            <a href="#" class="menu-title">About Us</a>
-          </li>
-
-
-
-        </ul>
-
-        <div class="menu-bottom">
-
-          <ul class="menu-category-list">
-
-            <li class="menu-category">
-
-
-
-              <ul class="menu-social-container">
-
-
-
-                <li>
-                  <a href="https://www.instagram.com/dgcashewtraders?igsh=YnpqZDh2Mm91NXZx" class="social-link">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="wa.me//918433822411" class="social-link">
-                    <ion-icon name="logo-whatsapp"></ion-icon>
-                  </a>
-                </li>
-
-              </ul>
-
-        </div>
-
-      </nav>
+     
 
   </header>
 
@@ -327,7 +90,7 @@
               <p class="banner-subtitle">Trending item</p>
               <h2 class="banner-title">20% off </h2>
               <p class="banner-subtitle">Cashew & almonds</p>
-              <a href="#" class="banner-btn">Shop now</a>
+              <a href="../Pages/store.html" class="banner-btn">Shop now</a>
             </div>
           </div>
           <div class="slider-item">
@@ -339,7 +102,7 @@
               <h2 class="banner-title">Combo Offer</h2>
               <p class="banner-text">
               </p>
-              <a href="#" class="banner-btn">Shop now</a>
+              <a href="../Pages/store.html" class="banner-btn">Shop now</a>
             </div>
           </div>
 
@@ -352,7 +115,7 @@
               <h2 class="banner-title">New Winter sale</h2>
               <p class="banner-subtitle">
               </p>
-              <a href="#" class="banner-btn">Buy now</a>
+              <a href="../Pages/store.html" class="banner-btn">Buy now</a>
             </div>
           </div>
 
@@ -364,53 +127,59 @@
 
         </div>
       </div>
-
-
-     
-      <div class="foot">
-        <object type="text/html" data="footer.html" width="100%" height="100%" style="overflow: hidden;"></object>
-      </div>
-
     </div>
 
-    <!-- <div class="sidebarcontainer" id="sidebarcontainer" style="z-index: 4" ;>
-      <div class="sidebar-left">
-        <div class="sideall">
-          <div class="hdn-head">
-            <h2>Cart</h2>
-          </div>
-          <div class="hdn-content">
-            <object type="text/html" data="addtocart.html" width="100%" height="600px"></object>
-          </div>
-        </div> 
-      </div>
-      
-    </div>-->
-   
+
+    </div>
   
-
-
-
- 
-
-   
-
-    
-
+  </section>
+  <footer class="footer main_foot" id="foo">
+    <div class="foot-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Our services</a></li>
+                    <li><a href="#">Bulk Order</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Address</h4>
+                <p>
+                    Shop No.14, Plot No.19, Sea Crown Charkop,
+                    Sector 8, Kandivali West, Mumbai,
+                    Maharashtra 400067, India
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Location</h4>
+                <ul>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.5285149303604!2d72.81701917466863!3d19.215784847570365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b79e893734df%3A0x39419900d5e49798!2sDG%20Cashew%20Traders!5e0!3m2!1sen!2sin!4v1708527376452!5m2!1sen!2sin" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact us</h4>
+                <div class="social-links">
+                    <a href="https://wa.me/p/5716250431821968/918433822411" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/dgcashewtraders?igsh=YnpqZDh2Mm91NXZx" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
+</footer>
 
 
 
-  </div>
+  
 
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script src="../Javascript/main.js"></script>
   <script>
-    function toCart(){
-      window.location.href="addtocart.html"
-  }
+ 
   // Function to initialize the cart count when the page loads
   window.addEventListener('DOMContentLoaded', function() {
       updateCartCount();

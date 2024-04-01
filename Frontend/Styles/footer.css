@@ -9,57 +9,47 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Footer line */
-.line {
-    height: 60px;
-    background-color: rgb(5, 42, 52);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+/* Footer Styles */
+.footer {
+    margin-top:300px;
+    background-color: rgb(6, 69, 87);   
+    color: #fff;
+    position: absolute !important;
+    bottom: 0 !important;
+    top: 100%;
+    height: 45vh;
+    letter-spacing: 1px;
+    width: 100vw;
+    padding: 50px 0;
+}
+.store_foot{
+    margin-top: 50%;
 }
 
-/* Container for footer content */
+
 .foot-container {
-    max-width: 1170px;
+    max-width: 1200px;
     margin: auto;
 }
 
-/* Footer styling */
-.footer {
-    background-color: rgb(6, 69, 87);
-    padding: 70px 0;
+.foot-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-/* Column styling */
 .footer-col {
-    flex: 1;
+    width: 25%;
     padding: 0 15px;
 }
 
-/* Header in each column */
 .footer-col h4 {
     font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
     margin-bottom: 20px;
-    font-weight: 500;
 }
 
-/* Horizontal line below header */
-.footer-col h4::before {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 2px;
-    background-color: rgb(6, 86, 108);
-    margin-bottom: 10px;
-}
-
-/* List styling */
 .footer-col ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
@@ -67,59 +57,28 @@ body {
     margin-bottom: 10px;
 }
 
-.footer-col ul li a {
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #ffffff;
+.footer-col a {
+    color: #fff;
     text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
+}
+
+.footer-col a:hover {
+    color: #aaa;
+}
+
+.footer-col p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 24px;
     transition: color 0.3s ease;
 }
 
-.footer-col ul li a:hover {
-    color: #ffffff;
-}
-
-/* Social links styling */
-.footer-col .social-links {
-    display: flex;
-    justify-content: center;
-}
-
-.footer-col .social-links a {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin-right: 10px;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
-}
-
-.footer-col .social-links a:last-child {
-    margin-right: 0;
-}
-
-.footer-col .social-links a:hover {
-    color: #24262b;
-    background-color: #ffffff;
-}
-
-/* Address paragraph styling */
-.footer-col p {
-    color: #bbbbbb;
-}
-
-#foo{
-	position: absolute;
-	bottom: 0;
-	top: 100%;
-	margin-top: 300px;
-	/* z-index: -1; */
-	width: 100vw;
-	
+.social-links a:hover {
+    color: #aaa;
 }

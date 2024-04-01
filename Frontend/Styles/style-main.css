@@ -59,12 +59,16 @@
   }
   .banner,.banner2{
     position: absolute;
-    top: 130px;
-    width: 100%;
+    top: 114px;
+    width: auto;
   }
-  .banner{
-    height:100%;
-  }
+#hars{
+  display: flex;
+  background: aqua;
+ 
+  width: 100vw;
+  justify-content: center;
+}
   .banner3{
     position: absolute;
     top: 0;
@@ -85,7 +89,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: hsla(0, 0%, 0%, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,7 +149,7 @@
   *, *::before, *::after {
     margin: 0;
     padding: 0;
-  
+    
     box-sizing: border-box;
   }
   
@@ -216,7 +220,7 @@
   }
   
   .has-scrollbar:hover::-webkit-scrollbar-thumb { background: hsl(0, 0%, 90%); }
-  
+  /*  */
   .has-scrollbar::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 80%); }
   
   .title {
@@ -239,7 +243,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: hsla(0, 0%, 0%, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     pointer-events: none;
     z-index: 4;
@@ -1123,7 +1127,7 @@ z-index: 6;
       left: 0;
       width: 100%;
       height: 2px;
-      background: rgb(26, 118, 144);
+      background: aliceblue;
       transform: scaleX(0);
       transform-origin: left;
       transition: var(--transition-timing);
