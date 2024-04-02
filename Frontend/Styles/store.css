@@ -13,7 +13,24 @@
 #store_head{
     margin-top: 100px;
 }
-
+.store_head{
+    
+        position: relative;
+        top: 0;
+        height: 21vh;
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px solid var(--cultured);
+        background-color: rgb(6, 86, 108);
+   
+}
+.store_head_cont{
+    display: flex;
+    position: absolute;
+    top: 5%;
+    justify-content: center;
+    z-index: 1000;
+}
 .pro-row{
     justify-content: center;
     align-items: center;
